@@ -24,7 +24,7 @@ class Welcome extends CI_Controller {
 		$this->load->helper('form');
 
 		$this->form_validation->set_rules("email","Email ID","required|callback_eval");
-		$this->form_validation->set_rules("password","Password","required|callback_passValidator");// ek validaor bnaya
+		$this->form_validation->set_rules("password","Password","required|callback_passValidator");
 		$this->form_validation->set_message('eval','email must be in correct format!');
 		$this->form_validation->set_message('passValidator', 'Incorrect username/password.');
 
@@ -52,8 +52,8 @@ class Welcome extends CI_Controller {
 
 	public function passValidator() 
     {
-        $this->load->model('Login');  // jo login model ko call krega  
-        if ($this->Login->log_in_correctly())  // login model ka log_in_co
+        $this->load->model('Login');  
+        if ($this->Login->log_in_correctly())
         {  
             return true;  
         } else {  
