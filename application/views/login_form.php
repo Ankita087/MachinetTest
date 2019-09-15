@@ -5,6 +5,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<title>Welcome to CodeIgniter</title>
+	<!-- <script
+  		src="https://code.jquery.com/jquery-3.4.1.min.js"
+  		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  		crossorigin="anonymous">
+	</script> -->
 
 	<style type="text/css">
 
@@ -64,21 +69,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 		box-shadow: 0 0 8px #D0D0D0;
 	}
 	</style>
+	<script type="text/javascript">
+		// function loginHandler(e) {
+		// 	e.preventDefault();
+		// 	console.log('here')
+		// 	var email = document.getElementById('email');
+		// 	var password = document.getElementById('password');
+		// 	console.log(email, password);
+		// }
+	</script>
 </head>
 <body>
 
 <div id="container">
-<input placeholder="eneter yur name"/>
-
-chlo karti hun mai fir thnks
-okkk koi na no thanx
-
-
-'Aur ek batt, ise git p background-color
-kase??
-u there??'
-git pe repo bnao,
-fir isme git init  command curl_share_closruko karte ha abio
-
+	<?php  echo validation_errors(); ?>
+	<?php echo form_open('welcome'); ?>
+   <input type="text" name="email" id="email" placeholder="EMAIL"/><br/> 
+   <input type="password" name="password" id="password" placeholder="PASSWORD"/><br/>
+   <input type="submit"  value="LOGIN">
+ </form>
 </body>
 </html>
